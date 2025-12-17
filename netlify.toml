@@ -1,13 +1,4 @@
-# netlify.toml for Remote Micro Frontend App
 
-[build]
-  # Update this according to your project type
-  # "build" for Create React App, "dist" for Vite, etc.
-  publish = "build"
-
-# ----------------------------
-# CORS Policy: Only allow host
-# ----------------------------
 [[headers]]
   for = "/*"
   [headers.values]
