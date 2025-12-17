@@ -1,7 +1,0 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"  # Or your host domain in production
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type, Authorization"
-    Access-Control-Allow-Credentials = "true"  # only if you use cookies/auth

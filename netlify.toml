@@ -1,0 +1,26 @@
+# netlify.toml for Remote Micro Frontend App
+
+[build]
+  # Update this according to your project type
+  # "build" for Create React App, "dist" for Vite, etc.
+  publish = "build"
+
+# ----------------------------
+# CORS Policy: Only allow host
+# ----------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://micro-front.netlify.app"  # Only host app
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Credentials = "true"
+
+# ---------------------------------------
+# Redirect direct visits to host app page
+# ---------------------------------------
+[[redirects]]
+  from = "/"
+  to = "https://micro-front.netlify.app"
+  status = 301
+  force = true
