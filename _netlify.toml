@@ -1,9 +1,7 @@
-[build]
-  publish = "build"   # or "dist" depending on your project
-
 [[headers]]
   for = "/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"          # allow all domains (for production, replace * with your host domain)
-    Access-Control-Allow-Methods = "GET, OPTIONS"
-    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Origin = "*"  # Or your host domain in production
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Credentials = "true"  # only if you use cookies/auth
